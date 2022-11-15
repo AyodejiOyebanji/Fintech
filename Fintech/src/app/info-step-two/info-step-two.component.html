@@ -1,0 +1,321 @@
+<div class="body">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <form [formGroup]="secondUserForm">
+          <div class="row">
+            <div class="d-flex justify-content-center mt-3">
+              <img
+                src="../../assets/address-removebg-preview.png"
+                alt=""
+                class="address"
+              />
+            </div>
+            <div class="alert alert-danger" *ngIf="errorMsg" >
+              {{errorMsg}}
+
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 mt-5">
+              <div>
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Home Address </mat-label>
+                  <input
+                    matInput
+                    type="text"
+                    class="w-100"
+                    formControlName="home_address"
+                    name="home_address"
+                    [class.isValid]="
+                      secondUserForm.get('home_address')?.valid &&
+                      secondUserForm.get('home_address')?.dirty
+                    "
+                    [class.is-inValid]="
+                      secondUserForm.get('home_address')?.valid &&
+                      secondUserForm.get('home_address')?.dirty
+                    "
+                  />
+                </mat-form-field>
+                <div
+                  *ngIf="
+                    secondUserForm.get('home_address')?.invalid &&
+                    secondUserForm.get('home_address')?.dirty
+                  "
+                >
+                  <small
+                    *ngIf="secondUserForm.get('home_address')?.errors?.['required']"
+                    class="text-danger"
+                    >This is field is required</small
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="row ms-2">
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-6">
+                    <div>
+                      <mat-form-field
+                        class="example-full-width"
+                        appearance="fill"
+                      >
+                        <mat-label>City </mat-label>
+                        <input
+                          matInput
+                          type="text"
+                          class="w-100"
+                          formControlName="city"
+                          name="city"
+                          [class.isValid]="
+                            secondUserForm.get('city')?.valid &&
+                            secondUserForm.get('city')?.dirty
+                          "
+                          [class.is-inValid]="
+                            secondUserForm.get('city')?.valid &&
+                            secondUserForm.get('city')?.dirty
+                          "
+                        />
+                      </mat-form-field>
+
+                      <div
+                        *ngIf="
+                          secondUserForm.get('city')?.invalid &&
+                          secondUserForm.get('city')?.dirty
+                        "
+                      >
+                        <small
+                          *ngIf="secondUserForm.get('city')?.errors?.['required']"
+                          class="text-danger"
+                          >This is field is required</small
+                        >
+                      </div>
+                      <div></div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div>
+                      <mat-form-field
+                        class="example-full-width"
+                        appearance="fill"
+                      >
+                        <mat-label>State</mat-label>
+                        <input
+                          matInput
+                          type="text"
+                          class="w-100"
+                          formControlName="state"
+                          name="state"
+                          [class.isValid]="
+                            secondUserForm.get('state')?.valid &&
+                            secondUserForm.get('state')?.dirty
+                          "
+                          [class.is-inValid]="
+                            secondUserForm.get('state')?.valid &&
+                            secondUserForm.get('state')?.dirty
+                          "
+                        />
+                      </mat-form-field>
+
+                      <div
+                        *ngIf="
+                          secondUserForm.get('state')?.invalid &&
+                          secondUserForm.get('state')?.dirty
+                        "
+                      >
+                        <small
+                          *ngIf="secondUserForm.get('state')?.errors?.['required']"
+                          class="text-danger"
+                          >This is field is required</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row ms-2">
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-6">
+                    <div>
+                      <mat-form-field
+                        class="example-full-width"
+                        appearance="fill"
+                      >
+                        <mat-label>School </mat-label>
+                        <input
+                          matInput
+                          type="text"
+                          class="w-100"
+                          formControlName="school"
+                          name="state"
+                          [class.isValid]="
+                            secondUserForm.get('school')?.valid &&
+                            secondUserForm.get('school')?.dirty
+                          "
+                          [class.is-inValid]="
+                            secondUserForm.get('school')?.valid &&
+                            secondUserForm.get('school')?.dirty
+                          "
+                        />
+                      </mat-form-field>
+                      <div
+                        *ngIf="
+                          secondUserForm.get('school')?.invalid &&
+                          secondUserForm.get('school')?.dirty
+                        "
+                      >
+                        <small
+                          *ngIf="secondUserForm.get('school')?.errors?.['required']"
+                          class="text-danger"
+                          >This is field is required</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div>
+                      <mat-form-field
+                        class="example-full-width"
+                        appearance="fill"
+                      >
+                        <mat-label>Bvn </mat-label>
+                        <input
+                          matInput
+                          type="number"
+                          class="w-100"
+                          formControlName="bvn"
+                          name="bvn"
+                          [class.isValid]="
+                            secondUserForm.get('bvn')?.valid &&
+                            secondUserForm.get('bvn')?.dirty
+                          "
+                          [class.is-inValid]="
+                            secondUserForm.get('bvn')?.valid &&
+                            secondUserForm.get('bvn')?.dirty
+                          "
+                        />
+                      </mat-form-field>
+
+                      <div
+                        *ngIf="
+                          secondUserForm.get('bvn')?.invalid &&
+                          secondUserForm.get('bvn')?.dirty
+                        "
+                      >
+                        <small
+                          *ngIf="secondUserForm.get('bvn')?.errors?.['required']"
+                          class="text-danger"
+                          >This is field is required</small
+                        >
+                        <small
+                          class="text-danger"
+                          *ngIf=" secondUserForm.get('bvn')?.errors?.['minlength']"
+                          >Invalid Bvn Number</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row ms-2">
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-6">
+                    <div>
+                      <mat-form-field
+                        class="example-full-width"
+                        appearance="fill"
+                      >
+                        <mat-label>Matric Number </mat-label>
+                        <input
+                          matInput
+                          type="text"
+                          class="w-100"
+                          formControlName="matricNo"
+                          name="matricNo"
+                          [class.isValid]="
+                            secondUserForm.get('matricNo')?.valid &&
+                            secondUserForm.get('matricNo')?.dirty
+                          "
+                          [class.is-inValid]="
+                            secondUserForm.get('matricNo')?.valid &&
+                            secondUserForm.get('matricNo')?.dirty
+                          "
+                        />
+                      </mat-form-field>
+                      <div
+                        *ngIf="
+                          secondUserForm.get('matricNo')?.invalid &&
+                          secondUserForm.get('matricNo')?.dirty
+                        "
+                      >
+                        <small
+                          *ngIf="secondUserForm.get('matricNo')?.errors?.['required']"
+                          class="text-danger"
+                          >This is field is required</small
+                        >
+                        <small
+                          class="text-danger"
+                          *ngIf=" secondUserForm.get('matricNo')?.errors?.['minlength']"
+                          >Invalid Bvn Number</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div>
+                      <mat-form-field
+                        class="example-full-width"
+                        appearance="fill"
+                      >
+                        <mat-label>NIN Number </mat-label>
+                        <input
+                          matInput
+                          type="text"
+                          class="w-100"
+                          formControlName="nin"
+                          name="nin"
+                          [class.isValid]="
+                            secondUserForm.get('nin')?.valid &&
+                            secondUserForm.get('nin')?.dirty
+                          "
+                          [class.is-inValid]="
+                            secondUserForm.get('nin')?.valid &&
+                            secondUserForm.get('nin')?.dirty
+                          "
+                        />
+                      </mat-form-field>
+                      <div
+                        *ngIf="
+                          secondUserForm.get('nin')?.invalid &&
+                          secondUserForm.get('nin')?.dirty
+                        "
+                      >
+                        <small
+                          *ngIf="secondUserForm.get('nin')?.errors?.['required']"
+                          class="text-danger"
+                          >This is field is required</small
+                        >
+                        <small
+                          class="text-danger"
+                          *ngIf=" secondUserForm.get('nin')?.errors?.['minlength']"
+                          >Invalid Bvn Number</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <button class="nextBtn w-100" mat-flat-button (click)="next()">Next</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

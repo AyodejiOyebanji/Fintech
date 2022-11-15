@@ -1,0 +1,189 @@
+
+        <!-- step one starts here -->
+        <div class="body">
+
+
+          <div class="container ">
+            <div class="d-flex justify-content-center ">
+              <img src="../../assets/dont.png" alt="" class="stepOneImage" />
+            </div>
+            <div class="d-flex justify-content-center">
+              <h1>Tell us about yourself</h1>
+            </div>
+            <div class="alert alert-danger" *ngIf="errorMsg">
+              {{errorMsg}}
+
+            </div>
+
+            <div >
+              <form action="" [formGroup]="firstUserForm">
+                <div  >
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>First name</mat-label>
+                    <input class="w-100"
+                      matInput
+                      formControlName="first_name"
+                      name="first_name"
+                      [class.isvalid]="
+                         firstUserForm.get('first_name')?.valid &&
+                         firstUserForm.get('first_name')?.dirty
+                      "
+                      [class.is-invalid]="
+                         firstUserForm.get('first_name')?.invalid &&
+                         firstUserForm.get('first_name')?.dirty
+                      "
+
+                    />
+                  </mat-form-field>
+
+                  <div
+                    *ngIf="
+                       firstUserForm.get('first_name')?.invalid &&
+                       firstUserForm.get('first_name')?.dirty
+                    "
+                  >
+                    <small
+                      class="text-danger"
+                      *ngIf=" firstUserForm.get('first_name')?.errors?.['minlength']"
+                      >The minimum length is three</small
+                    >
+
+                    <small
+                      class="text-danger"
+                      *ngIf=" firstUserForm.get('first_name')?.errors?.['required']"
+                      >This field is required</small
+                    >
+                  </div>
+                </div>
+
+                <div >
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Last name</mat-label>
+                    <input
+                      matInput
+                      formControlName="last_name"
+                      name="last_name"
+                      [class.isvalid]="
+                         firstUserForm.get('last_name')?.valid &&
+                         firstUserForm.get('last_name')?.touched
+                      "
+                      [class.is-invalid]="
+                         firstUserForm.get('last_name')?.invalid &&
+                         firstUserForm.get('last_name')?.dirty
+                      "
+                    />
+                  </mat-form-field>
+
+                  <div
+                    *ngIf="
+                       firstUserForm.get('last_name')?.invalid &&
+                       firstUserForm.get('last_name')?.dirty
+                    "
+                  >
+                    <small
+                      class="text-danger"
+                      *ngIf=" firstUserForm.get('last_name')?.errors?.['minlength']"
+                      >The minimum length is three</small
+                    >
+
+                    <small
+                      class="text-danger"
+                      *ngIf=" firstUserForm.get('last_name')?.errors?.['required']"
+                      >This field is required</small
+                    >
+                  </div>
+                </div>
+
+                <div >
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Email Address</mat-label>
+                    <input
+                      matInput
+                      type="email"
+                      formControlName="email"
+                      name="email"
+                      [class.isvalid]="
+                         firstUserForm.get('email')?.valid &&
+                         firstUserForm.get('email')?.touched
+                      "
+                      [class.is-invalid]="
+                         firstUserForm.get('email')?.invalid &&
+                         firstUserForm.get('email')?.dirty
+                      "
+                    />
+                  </mat-form-field>
+
+                  <div
+                    *ngIf="
+                       firstUserForm.get('email')?.invalid &&
+                       firstUserForm.get('email')?.dirty
+                    "
+                  >
+                    <small
+                      class="text-danger"
+                      *ngIf=" firstUserForm.get('email')?.errors?.['email']"
+                      >Input a valid email</small
+                    >
+
+                    <small
+                      class="text-danger"
+                      *ngIf=" firstUserForm.get('email')?.errors?.['required']"
+                      >This field is required</small
+                    >
+                  </div>
+                </div>
+
+                <div>
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Phone Number </mat-label>
+                    <input
+                      matInput
+                      type="number"
+                      formControlName="phonenumber"
+                      name="phonenumber"
+                      [class.isvalid]="
+                         firstUserForm.get('phonenumber')?.valid &&
+                         firstUserForm.get('phonenumber')?.touched
+                      "
+                      [class.is-invalid]="
+                         firstUserForm.get('phonenumber')?.invalid &&
+                         firstUserForm.get('phonenumber')?.dirty
+                      "
+                    />
+                  </mat-form-field>
+
+                  <div
+                    *ngIf="
+                       firstUserForm.get('phonenumber')?.invalid &&
+                       firstUserForm.get('phonenumber')?.dirty
+                    "
+                  >
+                    <small
+                      class="text-danger"
+                      *ngIf=" firstUserForm.get('phonenumber')?.errors?.['minlength']"
+                      >Please enter a valid phonenumber</small
+                    >
+
+                    <small
+                      class="text-danger"
+                      *ngIf=" firstUserForm.get('phonenumber')?.errors?.['required']"
+                      >This field is required</small
+                    >
+                  </div>
+                </div>
+
+
+                <div class="d-flex justify-content-center">
+                  <input type="checkbox"/><span
+                    >I agree to the <b>terms and conditions</b>
+                  </span>
+
+                </div>
+                <div class="d-flex justify-content-center">
+                  <button class="nextBtn" mat-flat-button (click)="next()" >NEXT</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+

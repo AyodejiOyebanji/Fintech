@@ -1,0 +1,34 @@
+
+header {
+  height: 100vh;
+  width: 100vw;
+  background: #FAFAFB;
+  overflow: hidden;
+  background: #C33764;  /* fallback colour. Make sure this is just one solid colour. */
+  background: -webkit-linear-gradient(#FAFAFB,#FAFAFB), url("../../assets/images (2).jfif");
+  background: linear-gradient(#FAFAFB,#FAFAFB), url("../../assets/images (2).jfif"); /* The least supported option. */
+}
+
+img {
+ object-fit: cover;
+}
+.textCouple{
+  margin-top: 10vh;
+}
+.signupText {
+  font-size: 4vh;
+}
+.signUpImg{
+  height: 20vh;
+
+}
+.card{
+  cursor: pointer;
+}
+.card:hover{
+  border: thin solid blue;
+}
+.card >.card-body:hover{
+  background-color: blue;
+  color:white;
+}

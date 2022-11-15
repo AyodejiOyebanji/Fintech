@@ -1,0 +1,31 @@
+<div class="body">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="image-upload ">
+          <h1 class="text-center">Kindly Upload your Image</h1>
+          <div class="alert alert-danger" *ngIf="errorMsg">
+           <p class="text-center">{{errorMsg}}
+          </p> 
+          </div>
+          <div class="d-flex justify-content-center">
+            <label for="file-input">
+
+              <img
+                src={{dispImage}}
+                alt=""
+                class="uploadAvater"
+              />
+            </label>
+
+            <input type="file" id="file-input" (change)="getImage($event)" />
+          </div>
+
+          <div class="d-flex justify-content-center mt-4">
+            <button class="nextBtn" mat-flat-button (click)="next()">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

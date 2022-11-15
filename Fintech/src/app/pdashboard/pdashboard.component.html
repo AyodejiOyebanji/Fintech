@@ -1,0 +1,182 @@
+<div class="body">
+  <div>
+    <nav class="navbar sticy-top ">
+      <div class="container-fluid shadow">
+        <button type="button" mat-button (click)="drawer.toggle()">
+          <span class="material-symbols-outlined text-light"> drag_indicator </span>
+          <span class="text-light">{{ greetings }} {{ userDetails.first_name }}</span>
+        </button>
+        <button mat-button [matMenuTriggerFor]="menu"> <img
+          src={{userDetails.profile_pics}}
+          alt=""
+          class="profile_image"
+        /></button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>
+
+      </div>
+    </nav>
+  </div>
+
+  <div>
+    <mat-drawer-container class="example-container" autosize>
+      <mat-drawer #drawer class="example-sidenav" mode="side">
+
+        <div>
+          <div>
+            <ul>
+              <div class="each m-3">
+
+                <li class="m-3"><span class="material-symbols-outlined p-2"> home </span> <span class="home">Home</span></li>
+
+              </div>
+              <div class="each m-3">
+              <li>
+                <span class="material-symbols-outlined p-2"> transform </span> <span class="home">Transfer</span>
+              </li>
+            </div>
+              <div class="each m-3">
+              <li>
+                <span class="material-symbols-outlined p-2"> payments </span> <span class="home">Bills, Airtime and Data</span>
+              </li>
+            </div>
+              <div class="each m-3">
+              <li>
+                <span class="material-symbols-outlined p-2"> credit_card </span> <span class="home">Loans</span>
+              </li>
+            </div>
+              <div class="each m-3">
+              <li>
+                <span class="material-symbols-outlined p-2"> person </span> <span class="home">Profile</span>
+              </li>
+            </div>
+              <div class="each m-3">
+              <li>
+                <span class="material-symbols-outlined  p-2"> manage_history </span> <span class="home">Account Statement</span>
+              </li>
+            </div>
+              <div class="each m-3">
+              <li>
+                <span class="material-symbols-outlined p-2"> diversity_3 </span> <span class="home">Refer</span>
+              </li>
+            </div>
+
+            </ul>
+          </div>
+        </div>
+      </mat-drawer>
+
+      <div class="example-sidenav-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-4 mt-2">
+                    <div class="one">
+                      <p class="pt-4 ps-4 text-light">Account Number:{{userDetails.accountNo}}</p>
+                      <h1 class="text-center ps-2 text-light">NGN {{userDetails.accountBalance}}:00</h1>
+                      <div class="d-flex justify-content-center">
+
+                        <hr class="hr ">
+
+                      </div>
+
+                      <div class="shortCuts">
+                        <div class="mt-1" routerLink="/dashboard/fundaccount">
+                          <span class="material-symbols-outlined ms-4 text-light">
+                            add_circle
+                            </span>
+                            <div class="mt-2 text-light">
+                             Fund Account
+                            </div>
+
+                        </div>
+
+                          <div>
+                            <span class="material-symbols-outlined p-2 text-light"> transform </span>
+                            <div class="text-light">
+                              Transfer
+                            </div>
+                          </div>
+
+                          <div>
+                            <span class="material-symbols-outlined  p-2 text-light"> manage_history </span>
+                            <div class="text-light">
+                              History
+                            </div>
+
+                          </div>
+
+
+                      </div>
+
+
+
+                    </div>
+
+                  </div>
+
+
+
+                  <div class="col-sm-6 col-md-6 col-lg-2 ">
+                    <div class="two p-3">
+                      <img src="../../assets/spend.png" alt="" srcset="" class="spending ">
+                      <p  class="text-muted text-center">Total Spending
+                      </p>
+                      <h1 class="text-muted text-center">#2000</h1>
+
+                    </div>
+
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-2 ">
+                    <div class="two p-3">
+                      <img src="../../assets/save.png" alt="" srcset="" class="spending ">
+                      <p  class="text-muted text-center">Total Saved
+                      </p>
+                      <h1 class="text-muted text-center">#2000</h1>
+
+
+                    </div>
+
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-4">
+                    <div class="activity p-3">
+                      <h1>Your Goals</h1>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+            </div>
+
+            <div class="row">
+              <div class=" col-sm-12 col-md-12 col-lg-8">
+                <div class="chart">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, odit esse necessitatibus assumenda a voluptatum repellendus dolores illum, fugit magnam dolor voluptatem? Dolore odio hic voluptatem officia odit ut amet?
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+      </div>
+    </mat-drawer-container>
+  </div>
+</div>
+
+
+
+
+
+
+
